@@ -85,5 +85,10 @@ class ContainerViewController: UIViewController, UIPageViewControllerDelegate {
         return .mid
     }
     
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            print("呼ばれた")
+        }
+    }
     
 }
