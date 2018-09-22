@@ -19,22 +19,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v14-t8-X7q">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v14-t8-X7q">
                                 <rect key="frame" x="0.0" y="146" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="cKF-Jv-QAq" kind="embed" id="gt1-v6-sPw"/>
+                                    <segue destination="cKF-Jv-QAq" kind="embed" identifier="cvcSegue" id="gt1-v6-sPw"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IND-Nr-Qlo">
-                                <rect key="frame" x="0.0" y="54" width="375" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IND-Nr-Qlo">
+                                <rect key="frame" x="13" y="54" width="350" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="MVq-LN-Uv9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="TYm-Wq-5cn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v14-t8-X7q" firstAttribute="centerY" secondItem="502-Ir-ELC" secondAttribute="centerY" id="QR3-EY-YwR"/>
+                            <constraint firstItem="v14-t8-X7q" firstAttribute="centerX" secondItem="IND-Nr-Qlo" secondAttribute="centerX" id="RAT-XJ-BYL"/>
+                            <constraint firstItem="v14-t8-X7q" firstAttribute="top" secondItem="IND-Nr-Qlo" secondAttribute="bottom" constant="56" id="SRO-hw-ehF"/>
+                            <constraint firstItem="v14-t8-X7q" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="X0d-RX-0G6"/>
+                            <constraint firstItem="IND-Nr-Qlo" firstAttribute="centerX" secondItem="502-Ir-ELC" secondAttribute="centerX" id="a7g-f3-QZC"/>
+                            <constraint firstItem="iAZ-4m-2z3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IND-Nr-Qlo" secondAttribute="trailing" id="bhr-du-g3g"/>
+                            <constraint firstItem="IND-Nr-Qlo" firstAttribute="top" secondItem="iAZ-4m-2z3" secondAttribute="top" constant="34" id="hcH-0D-05t"/>
+                            <constraint firstItem="IND-Nr-Qlo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iAZ-4m-2z3" secondAttribute="leading" id="lIb-3g-I9W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iAZ-4m-2z3"/>
                     </view>
                     <connections>

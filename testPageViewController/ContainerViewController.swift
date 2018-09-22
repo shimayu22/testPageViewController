@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol ChangeLabelDelegate: class{
+    //func changeLabelText(string:String)
+    func changeLabelText(index:Int)
+}
+
 class ContainerViewController: UIViewController, UIPageViewControllerDelegate {
     
     var pageViewController: UIPageViewController?
-    
+    var delegate:ChangeLabelDelegate?
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +93,9 @@ class ContainerViewController: UIViewController, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
-            print("呼ばれた")
+            delegate?.changeLabelText(index:appDelegate.index)
+            //print("delegate松「呼んだぞ」")
+            //delegate?.changeLabelText(string: "delegate松「呼ばれたぞ」")
         }
     }
     

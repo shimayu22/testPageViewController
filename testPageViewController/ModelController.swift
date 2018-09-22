@@ -21,7 +21,7 @@ import UIKit
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
     var pageData: [String] = []
-
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override init() {
         super.init()
@@ -39,6 +39,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         // Create a new view controller and pass suitable data.
         let dataViewController = storyboard.instantiateViewController(withIdentifier: "DataViewController") as! DataViewController
         dataViewController.dataObject = self.pageData[index]
+        appDelegate.index = index + 1
         return dataViewController
     }
 
