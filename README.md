@@ -1,0 +1,7 @@
+# testPageViewController
+スワイプ後にpageViewController外のLabelの表示を変更したかった
+
+同じViewControllerに乗っているLabelとUIPageViewController（ContainerViewController上）を連動させて「スワイプ完了後にLabelの表示を変更する」を実現したい。
+
+func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
+を使って「スワイプが完了したら」したい処理を書くと、スワイプが完了する→Labelの表示を変更するという処理ができる。
