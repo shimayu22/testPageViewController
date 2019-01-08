@@ -5,3 +5,6 @@
 
 func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
 を使って「スワイプが完了したら」したい処理を書くと、スワイプが完了する→Labelの表示を変更するという処理ができる。
+
+元々はスワイプ時のインデックス処理をするところでやろうとしていたけど、それだとちょっとでも動いたらLabelが次の表示になっちゃって安定しなかった。
+これだとスワイプが完全に完了してからLabelが変更されるので、見た目的にも安定する。
